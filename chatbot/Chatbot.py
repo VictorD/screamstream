@@ -7,12 +7,14 @@ from threading import Event
 
 exit = Event()
 
-def main():
-    s = openSocket()
-    joinRoom(s)
-    readbuffer = ""
 
-    while not exit.is_set():
+class ChatBot:
+
+    def __init__():
+        s = openSocket()
+        joinRoom(s)
+
+    def readChat():
         readbuffer = readbuffer + s.recv(1024)
         temp = string.split(readbuffer, "\n")
         readbuffer = temp.pop()
@@ -28,20 +30,3 @@ def main():
             if "You Suck" in message:
                 sendMessage(s, "No, you suck!")
                 break
-            
-        exit.wait(60)
-
-    print("All done!")
-    # perform any cleanup here
-
-def quit(signo, _frame):
-    print("Interrupted by %d, shutting down" % signo)
-    exit.set()
-
-if __name__ == '__main__':
-    import signal
-    for sig in ('TERM', 'INT'):
-        signal.signal(getattr(signal, 'SIG'+sig), quit);
-
-    main()
-

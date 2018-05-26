@@ -22,4 +22,4 @@ class ChatBot:
             user = getUser(line)
             message = getMessage(line)
             print user + " typed :" + message
-            return message
+            return str(message), str(user)

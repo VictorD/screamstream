@@ -6,9 +6,17 @@ from random import randint
 anal = Analysis()
 mouth = Mouth()
 bot = ChatBot()
-voices = ["Alex", "Fred", "Victoria", "Samantha"]
+available_voices = ["Alex", "Fred", "Victoria", "Samantha"]
+user_voices = {}
+
+
+def get_voice(user):
+    if user not in user_voices:
+        user_voices[user] = available_voices[randint(0, len(available_voices)-1)]
+    return user_voices[user]
+
 
 while True:
-    comment = str(bot.readChat())
-    voice = voices[randint(0, 3)]
+    comment, user = bot.readChat()
+    voice = get_voice(user)
     mouth.speak(comment, voice) if anal.is_negative(comment) else None

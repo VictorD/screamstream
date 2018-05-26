@@ -7,12 +7,9 @@ anal = Analysis()
 mouth = Mouth()
 bot = ChatBot()
 
+while True:
+	comment = bot.readChat()
+	mouth.speak(comment) if anal.is_negative(comment) else None
 
-bot.readChat()
 
-comment = "fuck you"
-mouth.speak(comment) if anal.is_negative(comment) else ""
-
-comment = "I hate you"
-mouth.speak(comment) if anal.is_negative(comment) else ""
-
+mouth.close()

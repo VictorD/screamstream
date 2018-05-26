@@ -1,4 +1,4 @@
-from subprocess import call
+from subprocess import Popen
 
 
 class Mouth:
@@ -6,7 +6,5 @@ class Mouth:
         pass
 
     def speak(self, sentence, voice="Alex"):
-        call(["say", "-v", voice, sentence])
-
-    def close(self):
-        pass
+        cmd = ["say", "-v", voice, sentence]
+        Popen(cmd)

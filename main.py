@@ -6,7 +6,7 @@ from random import randint
 anal = Analysis()
 mouth = Mouth()
 bot = ChatBot()
-available_voices = ["Alex", "Fred", "Victoria", "Samantha"]
+available_voices = ["Alex", "Fred", "Victoria", "Samantha", "Karen", "Veena", "Moira", "Fiona", "Tessa", "Daniel"]
 user_voices = {}
 
 

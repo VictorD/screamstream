@@ -8,6 +8,11 @@ bot = ChatBot()
 
 
 while True:
-    comment, user = bot.readChat()
-    voice = mouth.get_voice(user)
-    mouth.speak(comment, voice) if anal.is_negative(comment) else None
+    try:
+        comment, user = bot.readChat()
+        voice = mouth.get_voice(user)
+        mouth.speak(comment, voice) if anal.is_negative(comment) else None
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except Exception, e:
+        print(e)

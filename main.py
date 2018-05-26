@@ -8,7 +8,7 @@ mouth = Mouth()
 bot = ChatBot()
 
 while True:
-	comment = bot.readChat()
+	comment = str(bot.readChat())
 	mouth.speak(comment) if anal.is_negative(comment) else None
 
 

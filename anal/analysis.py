@@ -8,6 +8,7 @@ class Analysis:
 
     def is_negative(self, input):
         comp = self.sid.polarity_scores(input)['compound']
+        print "score:" + str(comp)
         return float(comp) < 0.0
 
 

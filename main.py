@@ -1,2 +1,6 @@
 from anal.analysis import Analysis
-from mouth.
+import mouth
+from chatbot import Chatbot
+
+bot = ChatBot()
+bot.readChat()

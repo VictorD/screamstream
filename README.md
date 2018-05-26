@@ -1,6 +1,6 @@
 # screamstream
 
-
+![alt text](img/readme.png "ScreamStream logo")
 
 ## Install sentinent analysis training data:
 

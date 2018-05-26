@@ -1,5 +1,5 @@
 
-from analysis import Analysis
+from anal.analysis import Analysis
 
 hotel_rev = ["Great place to be when you are in Bangalore.",
              "The place was being renovated when I visited so the seating was limited.",

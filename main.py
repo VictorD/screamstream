@@ -1,6 +1,18 @@
 from anal.analysis import Analysis
-import mouth
+from mouth.mouth import Mouth
 from chatbot import Chatbot
 
+
+anal = Analysis()
+mouth = Mouth()
 bot = ChatBot()
+
+
 bot.readChat()
+
+comment = "fuck you"
+mouth.speak(comment) if anal.is_negative(comment) else ""
+
+comment = "I hate you"
+mouth.speak(comment) if anal.is_negative(comment) else ""
+

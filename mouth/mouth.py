@@ -6,8 +6,9 @@ class Mouth:
         self.engine = pyttsx.init()
 
     def speak(self, sentence):
-        self.engine.say('Good morning.')
+        self.engine.say(sentence)
         self.engine.runAndWait()
+        self.engine.stop()
 
 
 
